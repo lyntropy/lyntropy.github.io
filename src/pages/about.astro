@@ -21,6 +21,17 @@ const goal = 7;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
+    <style>
+      h1 {
+        color: rgb(248, 135, 154);
+        font-size: 4rem;
+      }
+
+      .game {
+        color: rgb(66, 92, 240);
+      }
+    </style>
   </head>
   <body>
     <a href="/">Home</a>
@@ -52,17 +63,7 @@ const goal = 7;
 
     <p>My favorite video games are:</p>
     <ul>
-      {games.map((game) => <li> {game}</li>)}
+      {games.map((game) => <li class="game"> {game}</li>)}
     </ul>
-
-    {happy && <p> i'm happy that this site is working LOL</p>}
-    {finished && <p>I finished this tutorial!</p>}
-    {
-      goal === 7 ? (
-        <p>My goal is to finish in 7 days.</p>
-      ) : (
-        <p>My goal is not 3 days.</p>
-      )
-    }
   </body>
 </html>
